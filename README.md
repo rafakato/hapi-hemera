@@ -39,7 +39,17 @@ server.register({
           generateTimeout: 100
         }
       }
-    }
+    },
+    
+    // In case you want to use hemera plugins
+    plugins: [
+      {
+        name: 'hemera-joi',
+        onReady: {
+          setOption: 'payloadValidator' // execute setOption method on ready using the value `payloadValidator` as option name and the plugin name as the value 
+        }
+      }
+    ]
   }
 })
 ```
